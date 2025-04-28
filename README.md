@@ -1,4 +1,6 @@
 # Multiple-prosesor-dan-Multiprosesor-symmetric
+![image](https://github.com/user-attachments/assets/e5f18927-4d88-40e3-b703-64765638f3f0)
+
 ## 1. Multi Prosesor Simetris (SMP - Symmetric Multi-Processing)
 - Definisi: SMP adalah sistem komputer di mana beberapa prosesor memiliki akses yang setara (simetris) ke memori utama dan perangkat input/output. Semua prosesor dalam SMP dapat melakukan eksekusi tugas secara paralel.
 
