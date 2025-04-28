@@ -1,4 +1,6 @@
 # Multiple-prosesor-dan-Multiprosesor-symmetric
+![Multiprosesor dan Multiple prosesor drawio (1)](https://github.com/user-attachments/assets/fc449028-2d76-4267-ae91-cfe08c45307a)
+
 
 ## 1. Multiple Prosesor (Umum)
 - Diagram tadi memperlihatkan:
