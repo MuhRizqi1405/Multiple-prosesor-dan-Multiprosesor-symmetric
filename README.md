@@ -2,21 +2,17 @@
 ![Multiprosesor dan Multiple prosesor drawio (1)](https://github.com/user-attachments/assets/fc449028-2d76-4267-ae91-cfe08c45307a)
 
 
-## 1. Multiple Prosesor (Umum)
-- Diagram tadi memperlihatkan:
+## 1. Multiple Prosesor (Umum) KIRI
+-  Penjelasan:
 
-- Prosesor 1 dan Prosesor 2 bekerja secara relatif mandiri.
+- Masing-masing prosesor punya cache memory sendiri (buat simpan data lokal supaya cepat).
 
-- Mereka tidak harus berbagi memori dan I/O.
+- Memori lokal bisa berbeda-beda (bukan shared).
 
-- Memori bisa terpisah untuk masing-masing prosesor, atau kadang sebagian kecilnya dibagi bersama.
+- Komunikasi antar prosesor melalui interconnect (bisa berupa switch, jaringan cepat, atau bus).
 
-- Biasanya digunakan untuk sistem heterogen:
-
-- Misal, satu prosesor khusus untuk kalkulasi matematis, satu lagi untuk menangani komunikasi jaringan.
-
-- Komunikasi antar prosesor terjadi lewat jalur jaringan (interconnect), misalnya bus atau switch.
-
+- Cocok untuk sistem yang membutuhkan skala besar dan fleksibilitas tinggi, seperti cluster komputer.
+  
 ➡ Ciri utamanya:
 
 - Struktur fleksibel.
@@ -25,23 +21,23 @@
 
 - Bisa lebih susah sinkronisasi data antar prosesor.
 
-- Contoh nyata:
+## Contoh nyata:
 
 - Cluster komputer (banyak komputer biasa dihubungkan dalam satu sistem untuk kerja berat).
 
 - Superkomputer lawas seperti IBM BlueGene.
 
-## 2. Multi Prosesor Simetris (SMP - Symmetric Multiprocessing)
-- Diagram tadi memperlihatkan:
+## 2. Multi Prosesor Simetris (SMP - Symmetric Multiprocessing) KANAN
+- Penjelasan:
 
-- Prosesor 1, Prosesor 2, dan Prosesor 3 terhubung ke memori bersama (Shared Memory).
+- Setiap prosesor punya cache pribadi untuk mempercepat akses data sebelum harus mengambil dari memori utama.
 
-- Mereka setara: tidak ada master atau slave.
+- Memori dan I/O bersifat shared, semua prosesor bisa mengakses semua data yang ada.
 
-- Semua prosesor bisa mengakses semua data yang ada di memori.
+- Semua prosesor bisa menjalankan tugas secara paralel tanpa ketergantungan struktur hirarki.
 
-- Ada juga Shared I/O Bus: perangkat input/output bisa diakses oleh semua prosesor.
-
+- Cocok untuk server, workstation berperforma tinggi, atau superkomputer kecil.
+- 
 ➡ Ciri utamanya:
 
 - Semua prosesor identik (jenis sama, kekuatan sama).
@@ -52,7 +48,7 @@
 
 - Tapi, bisa terjadi masalah contention (rebutan akses memori).
 
-- Contoh nyata:
+##  Contoh nyata:
 
 - Server modern (misal server database besar).
 
