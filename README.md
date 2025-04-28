@@ -1,39 +1,57 @@
 # Multiple-prosesor-dan-Multiprosesor-symmetric
-![image](https://github.com/user-attachments/assets/e5f18927-4d88-40e3-b703-64765638f3f0)
 
-## 1. Multi Prosesor Simetris (SMP - Symmetric Multi-Processing)
-- Definisi: SMP adalah sistem komputer di mana beberapa prosesor memiliki akses yang setara (simetris) ke memori utama dan perangkat input/output. Semua prosesor dalam SMP dapat melakukan eksekusi tugas secara paralel.
+## 1. Multiple Prosesor (Umum)
+- Diagram tadi memperlihatkan:
 
-- Karakteristik:
+- Prosesor 1 dan Prosesor 2 bekerja secara relatif mandiri.
 
-- Semua prosesor terhubung ke memori bersama yang dapat diakses oleh setiap prosesor.
+- Mereka tidak harus berbagi memori dan I/O.
 
-- Setiap prosesor memiliki tingkat kontrol yang sama atas eksekusi dan pengelolaan sumber daya.
+- Memori bisa terpisah untuk masing-masing prosesor, atau kadang sebagian kecilnya dibagi bersama.
 
-- ontoh implementasi: komputer dengan dua atau lebih prosesor yang bekerja secara paralel, dengan setiap prosesor memiliki akses langsung ke memori bersama.
+- Biasanya digunakan untuk sistem heterogen:
 
-- Keuntungan: Efisiensi yang lebih baik dalam pemrosesan paralel dan meningkatkan kinerja sistem secara keseluruhan.
+- Misal, satu prosesor khusus untuk kalkulasi matematis, satu lagi untuk menangani komunikasi jaringan.
 
-- Kekurangan: Terkadang kesulitan dalam manajemen memori dan pengelolaan tugas.
+- Komunikasi antar prosesor terjadi lewat jalur jaringan (interconnect), misalnya bus atau switch.
 
-## 2. Multiple Prosesor
-- Definisi: Multiple prosesor lebih umum dan mencakup semua sistem yang menggunakan lebih dari satu prosesor. Ini tidak selalu mengacu pada SMP, tetapi dapat melibatkan arsitektur yang berbeda.
+➡ Ciri utamanya:
 
-- Karakteristik:
+- Struktur fleksibel.
 
-- Bisa berupa sistem dengan beberapa prosesor yang tidak memiliki akses yang setara (misalnya, prosesor master dan prosesor slave).
+- Prosesor bisa berbeda-beda jenis dan tugasnya.
 
-- Prosesor dalam sistem ini mungkin memiliki peran tertentu (misalnya, satu prosesor yang mengatur tugas dan yang lainnya melaksanakan tugas tersebut).
+- Bisa lebih susah sinkronisasi data antar prosesor.
 
-- Tidak semua prosesor dalam sistem ini memiliki akses langsung ke memori bersama.
+- Contoh nyata:
 
-- Sistem ini dapat melibatkan arsitektur yang lebih kompleks, seperti NUMA (Non-Uniform Memory Access) atau MIMD (Multiple Instruction, Multiple Data).
+- Cluster komputer (banyak komputer biasa dihubungkan dalam satu sistem untuk kerja berat).
 
-- Keuntungan: Dapat mengoptimalkan tugas tertentu dengan membagi tugas antara prosesor yang berbeda, meningkatkan kinerja pada beban tertentu.
+- Superkomputer lawas seperti IBM BlueGene.
 
-- Kekurangan: Pengelolaan lebih kompleks, terutama dalam distribusi beban dan akses memori.
+## 2. Multi Prosesor Simetris (SMP - Symmetric Multiprocessing)
+- Diagram tadi memperlihatkan:
 
-# Perbedaan Utama:
-- Akses Memori: SMP menawarkan akses memori yang setara untuk semua prosesor, sedangkan sistem multiple prosesor bisa memiliki cara yang lebih beragam dalam mengelola memori dan akses prosesor.
+- Prosesor 1, Prosesor 2, dan Prosesor 3 terhubung ke memori bersama (Shared Memory).
 
-- Manajemen Sistem: SMP lebih sederhana dalam hal manajemen dan koordinasi prosesor karena sifat simetriknya, sementara multiple prosesor bisa lebih rumit dalam hal pengelolaan dan distribusi tugas.
+- Mereka setara: tidak ada master atau slave.
+
+- Semua prosesor bisa mengakses semua data yang ada di memori.
+
+- Ada juga Shared I/O Bus: perangkat input/output bisa diakses oleh semua prosesor.
+
+➡ Ciri utamanya:
+
+- Semua prosesor identik (jenis sama, kekuatan sama).
+
+- Kinerja naik kalau jumlah prosesor naik (scalable).
+
+- Komunikasi antar prosesor cepat lewat shared memory.
+
+- Tapi, bisa terjadi masalah contention (rebutan akses memori).
+
+- Contoh nyata:
+
+- Server modern (misal server database besar).
+
+- Laptop/PC multi-core juga bisa dianggap mini SMP (Core i7, Ryzen, dsb.).
