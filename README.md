@@ -2,7 +2,7 @@
 ![Multiprosesor dan Multiple prosesor drawio (1)](https://github.com/user-attachments/assets/fc449028-2d76-4267-ae91-cfe08c45307a)
 
 
-## 1. Multiple Prosesor (Umum) KIRI
+## 1. Multiple Prosesor (Umum) KANAN
 -  Penjelasan:
 
 - Masing-masing prosesor punya cache memory sendiri (buat simpan data lokal supaya cepat).
@@ -27,7 +27,7 @@
 
 - Superkomputer lawas seperti IBM BlueGene.
 
-## 2. Multi Prosesor Simetris (SMP - Symmetric Multiprocessing) KANAN
+## 2. Multi Prosesor Simetris (SMP - Symmetric Multiprocessing) KIRI
 - Penjelasan:
 
 - Setiap prosesor punya cache pribadi untuk mempercepat akses data sebelum harus mengambil dari memori utama.
